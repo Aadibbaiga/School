@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>मेरा स्कूल | School Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background: #0d47a1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #08306b;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 400px;
+            background: linear-gradient(
+                rgba(0, 50, 120, 0.7),
+                rgba(0, 50, 120, 0.7)
+            ),
+            url("https://images.unsplash.com/photo-1580582932707-520aed937b7b")
+            center/cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #ff9800;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e68900;
+        }
+
+        /* Common Section */
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0d47a1;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        /* About */
+        .about {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #0d47a1;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Notice */
+        .notice {
+            background: white;
+            padding: 25px;
+            border-left: 6px solid #0d47a1;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .notice strong {
+            color: #d84315;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #08306b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin: 7px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🏫 ज्ञानदीप स्कूल</h1>
+        <p>शिक्षा • संस्कार • सफलता</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#classes">Classes</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#notice">Notice</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero" id="home">
+        <div>
+            <h2>हमारे स्कूल में आपका स्वागत है</h2>
+
+            <p>
+                बेहतर शिक्षा और उज्ज्वल भविष्य की ओर एक कदम
+            </p>
+
+            <a href="#about" class="btn">
+                हमारे बारे में जानें
+            </a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>हमारे स्कूल के बारे में</h2>
+
+        <div class="about">
+
+            <p>
+                ज्ञानदीप स्कूल एक आधुनिक और गुणवत्तापूर्ण शिक्षा प्रदान
+                करने वाला विद्यालय है। हमारा उद्देश्य विद्यार्थियों को
+                शिक्षा के साथ-साथ अच्छे संस्कार, अनुशासन और आत्मविश्वास
+                प्रदान करना है।
+            </p>
+
+            <br>
+
+            <p>
+                हमारे विद्यालय में विद्यार्थियों के सर्वांगीण विकास के लिए
+                पढ़ाई, खेल, विज्ञान, कंप्यूटर और अन्य गतिविधियों पर ध्यान
+                दिया जाता है।
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Classes -->
+    <section id="classes">
+
+        <h2>हमारी कक्षाएँ</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>प्राथमिक कक्षा</h3>
+                <p>
+                    कक्षा 1 से 5 तक के विद्यार्थियों के लिए
+                    मजबूत शैक्षणिक आधार।
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>मिडिल स्कूल</h3>
+                <p>
+                    कक्षा 6 से 8 तक विद्यार्थियों के लिए
+                    गुणवत्तापूर्ण शिक्षा।
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>हाई स्कूल</h3>
+                <p>
+                    कक्षा 9 से 12 तक परीक्षा और करियर
+                    की तैयारी।
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Teachers -->
+    <section id="teachers">
+
+        <h2>हमारे शिक्षक</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>👨‍🏫 श्री अमित शर्मा</h3>
+                <p>गणित शिक्षक</p>
+            </div>
+
+            <div class="card">
+                <h3>👩‍🏫 सुश्री पूजा वर्मा</h3>
+                <p>विज्ञान शिक्षिका</p>
+            </div>
+
+            <div class="card">
+                <h3>👨‍🏫 श्री राजेश सिंह</h3>
+                <p>हिंदी शिक्षक</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Notice -->
+    <section id="notice">
+
+        <h2>📢 सूचना पट्ट</h2>
+
+        <div class="notice">
+            <strong>महत्वपूर्ण सूचना:</strong>
+            आगामी परीक्षा की तैयारी शुरू करें।
+        </div>
+
+        <div class="notice">
+            <strong>छुट्टी की सूचना:</strong>
+            विद्यालय के अवकाश की जानकारी यहाँ देखें।
+        </div>
+
+        <div class="notice">
+            <strong>कार्यक्रम:</strong>
+            वार्षिक समारोह जल्द आयोजित किया जाएगा।
+        </div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+
+        <h2>📸 स्कूल गैलरी</h2>
+
+        <div class="gallery">
+
+            <img
+                src="https://images.unsplash.com/photo-1577896851231-70ef18881754"
+                alt="School"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+                alt="Students"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+                alt="School Building"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>📞 संपर्क करें</h2>
+
+        <div class="contact">
+
+            <p>🏫 स्कूल: ज्ञानदीप स्कूल</p>
+
+            <p>📍 पता: आपका शहर, मध्य प्रदेश</p>
+
+            <p>📞 मोबाइल: 9876543210</p>
+
+            <p>📧 ईमेल: school@example.com</p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ज्ञानदीप स्कूल | All Rights Reserved
+        </p>
+
+        <p>
+            Made with ❤️ using HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        // सभी navigation links को select करना
+        const links = document.querySelectorAll("nav a");
+
+        // Smooth scrolling
+        links.forEach(function(link) {
+
+            link.addEventListener("click", function(event) {
+
+                event.preventDefault();
+
+                const target = document.querySelector(
+                    this.getAttribute("href")
+                );
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+        // Page load message
+        window.addEventListener("load", function() {
+
+            console.log(
+                "ज्ञानदीप स्कूल वेबसाइट सफलतापूर्वक लोड हो गई!"
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
